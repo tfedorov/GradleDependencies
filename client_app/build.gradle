@@ -22,7 +22,10 @@ dependencies {
     implementation 'org.scala-lang:scala-library:2.13.8'
     implementation 'com.tfedorov.gradledependencies:softwarelibrary:0.1'
     implementation 'com.tfedorov.gradledependencies:sciencelibrary:0.1'
+
 }
+//https://docs.gradle.org/current/userguide/rich_versions.html#rich-version-constraints
+//https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html
 
 application {
     mainClass = 'com.tfedorov.gradledependencies.client.ClientApp'
