@@ -4,7 +4,7 @@
 # Ignore Gradle build output directory
 build
 .idea/
-client_app.iml
-client_app.ipr
-client_app.iws
+ClientApp.iml
+ClientApp.ipr
+ClientApp.iws
 /out
