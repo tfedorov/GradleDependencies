@@ -16,12 +16,6 @@ repositories {
     // Use Maven Central for resolving dependencies.
     mavenLocal()
 }
-configurations.all {
-    resolutionStrategy {
-        force 'com.tfedorov.gradledependencies:booktransitive:0.1'
-
-    }
-}
 
 dependencies {
     // Use Scala 2.13 in our library project
