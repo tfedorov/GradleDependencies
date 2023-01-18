@@ -5,5 +5,5 @@ package com.tfedorov.gradledependencies.booktransitive
 
 object Book {
 
-  def book: String = " -> Programming in Scala Fifth Edition 5st edition. by Martin Odersky"
+  def book: String = " a book 'Programming in Scala Fifth Edition 5st edition.' by Martin Odersky"
 }

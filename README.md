@@ -1,8 +1,19 @@
 # GradleDependencies
 
-Project for learning gradle dependencies. </br>
-Please read before:
+This project for learning Gradle dependencies management. </br>
 
+The project has runnable module _ClientApp_.
+_ClientApp_ has 2 dependency libraries: '_ScienceLibrary_' module and '_SoftwareLibrary_' module.
+Both '_ScienceLibrary_' and '_SoftwareLibrary_' have a dependency on the '_Book_' module.<br/>
+The '_Book_' module has several versions: '_booktransitive:0.1_', '_booktransitive:0.2_', etc.<br>
+
+Gradle uses __dependency management__ to define which version of the '_Book_' the '_ClientApp_' will use.<p/>
+
+The task is change '_Book_' version using _build.gradle_ file.<p/>
+
+All required modules: '_ScienceLibrary_' , '_SoftwareLibrary_', all versions of 'Book' are present in the project.
+
+Please read before:
 - [Gradle docs: Rich Version Constraints](https://docs.gradle.org/current/userguide/rich_versions.html#rich-version-constraints)
 - [Gradle docs: Resolution Strategy](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html)
 - [Manage Gradle version conflicts with resolution strategy](https://proandroiddev.com/manage-gradle-version-conflicts-with-strategy-611ac3f6ce19)
@@ -104,8 +115,37 @@ Change _build.gradle_ in _ClientApp_ and receive:
 % gradle clean build run
 
 > Task :run
-Action 1:  Take from the Science library -  -> Machine Learning Yearning. by Andrew Ng
-Action 2:  Take from the Software library -  -> Machine Learning Yearning. by Andrew Ng
+
+    ____________________________________________
+ / \                                            \.
+|   |                                           |.
+ \_ |                                           |.
+    |   This is a tutorial application for the  |.
+    | Gradle Dependencies managment.            |.
+    |                                           |.
+    | The App performs 2 actions:               |.
+    |  - take a 'Book' in a 'Science Library'   |.
+    |  - take a 'Book' in a 'Software Library'  |.
+    |                                           |.
+    |  'Science Library' and 'Software Library' |.
+    | are 2 modules each of them contains       |.
+    | a 'Book' module as a dependency           |.
+    |                                           |.
+    |  There are several versions of a 'Book':  |.
+    |   - booktransitive:0.1                    |.
+    |   - booktransitive:0.2                    |.
+    |                                           |.
+    |  The Gradle defines version of the 'Book' |.
+    | by DEPENDECY MANAGEMENT.                  |.
+    |                                           |.
+    |   ________________________________________|___
+    |  /                                           /.
+    \_/___________________________________________/.
+
+Action 1: I Take from the 'Science Library'  a book 'Machine Learning Yearning'. by Andrew Ng
+Action 2: I take from the 'Software Library'  a book 'Machine Learning Yearning'. by Andrew Ng
+
+The application is over...
 ```
 
 Do it at 2 ways minimum.

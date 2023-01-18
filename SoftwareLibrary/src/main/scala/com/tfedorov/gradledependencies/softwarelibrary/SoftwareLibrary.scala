@@ -8,5 +8,5 @@ import com.tfedorov.gradledependencies.booktransitive.Book
 
 object SoftwareLibrary {
 
-  def takeFromLibrary: String = " Take from the Software library - " + Book.book
+  def takeFromLibrary: String = "I take from the 'Software Library' " + Book.book
 }

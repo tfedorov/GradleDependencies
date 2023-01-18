@@ -8,6 +8,35 @@ import com.tfedorov.gradledependencies.sciencelibrary.ScienceLibrary
 
 object ClientApp extends App {
 
+  println(
+    """
+      |    ____________________________________________
+      | / \                                            \.
+      ||   |                                           |.
+      | \_ |                                           |.
+      |    |   This is a tutorial application for the  |.
+      |    | Gradle Dependencies managment.            |.
+      |    |                                           |.
+      |    | The App performs 2 actions:               |.
+      |    |  - take a 'Book' in a 'Science Library'   |.
+      |    |  - take a 'Book' in a 'Software Library'  |.
+      |    |                                           |.
+      |    |  'Science Library' and 'Software Library' |.
+      |    | are 2 modules each of them contains       |.
+      |    | a 'Book' module as a dependency           |.
+      |    |                                           |.
+      |    |  There are several versions of a 'Book':  |.
+      |    |   - booktransitive:0.1                    |.
+      |    |   - booktransitive:0.2                    |.
+      |    |                                           |.
+      |    |  The Gradle defines version of the 'Book' |.
+      |    | by DEPENDECY MANAGEMENT.                  |.
+      |    |                                           |.
+      |    |   ________________________________________|___
+      |    |  /                                           /.
+      |    \_/___________________________________________/.
+      |""".stripMargin)
   println("Action 1: " + ScienceLibrary.takeFromLibrary)
   println("Action 2: " + SoftwareLibrary.takeFromLibrary)
+  println("\nThe application is over...")
 }
