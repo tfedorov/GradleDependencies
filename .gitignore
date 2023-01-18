@@ -1,11 +1,15 @@
 # Ignore Gradle project-specific cache directory
+.DS_Store
+.idea/
+
+# Ignore Gradle project-specific cache directory
 .gradle
+
+out/
 
 # Ignore Gradle build output directory
 build
-.idea/
 .gradle/
-.DS_Store
-BookTransitiveV2.iml
-BookTransitiveV2.ipr
-BookTransitiveV2.iws
+*.iml
+*.ipr
+*.iws

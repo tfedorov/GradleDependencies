@@ -7,5 +7,5 @@ import com.tfedorov.gradledependencies.booktransitive.Book
 
 object ScienceLibrary {
 
-  def takeFromLibrary: String = "I Take from the 'Science Library' " + Book.book
+  def takeFromLibrary: String = "I take from the 'Science Library'  " + Book.book
 }

@@ -1,7 +1,9 @@
 # GradleDependencies
 
-This project for learning Gradle dependencies management. </br>
+This project for learning Gradle dependencies management task. </br>
+[Install & configure](#Installation) projects modules & solve [tasks](#tasks) using Gradle.
 
+### Modules description
 The project has runnable module _ClientApp_.
 _ClientApp_ has 2 dependency libraries: '_ScienceLibrary_' module and '_SoftwareLibrary_' module.
 Both '_ScienceLibrary_' and '_SoftwareLibrary_' have a dependency on the '_Book_' module.<br/>
@@ -107,6 +109,7 @@ Action 1:  Take from the Science library -  -> Programming in Scala Fifth Editio
 Action 2:  Take from the Software library -  -> Programming in Scala Fifth Edition 5st edition. by Martin Odersky
 ```
 
+## Tasks
 ### Task 1
 
 Change _build.gradle_ in _ClientApp_ and receive:
@@ -142,10 +145,11 @@ Change _build.gradle_ in _ClientApp_ and receive:
     |  /                                           /.
     \_/___________________________________________/.
 
-Action 1: I Take from the 'Science Library'  a book 'Machine Learning Yearning'. by Andrew Ng
-Action 2: I take from the 'Software Library'  a book 'Machine Learning Yearning'. by Andrew Ng
+Action 1: I take from the 'Science Library'   a book 'Programming in Scala Fifth Edition 5st edition.' by Martin Odersky (v2)
+Action 2: I take from the 'Software Library'  a book 'Programming in Scala Fifth Edition 5st edition.' by Martin Odersky (v2)
 
 The application is over...
+
 ```
 
 Do it at 2 ways minimum.

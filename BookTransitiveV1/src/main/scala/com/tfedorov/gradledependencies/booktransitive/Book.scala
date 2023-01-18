@@ -5,5 +5,5 @@ package com.tfedorov.gradledependencies.booktransitive
 
 object Book {
 
-  def book: String = " a book 'Machine Learning Yearning'. by Andrew Ng"
+  def book: String = " a book 'Machine Learning Yearning'. by Andrew Ng. (v1)"
 }
