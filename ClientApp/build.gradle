@@ -17,23 +17,32 @@ repositories {
     mavenLocal()
 }
 configurations.all {
-//    resolutionStrategy {
-//        //force 'com.tfedorov.gradledependencies:booktransitive:0.1'
-//        //failOnVersionConflict()
-//    }
-//    resolutionStrategy.capabilitiesResolution.withCapability('com.tfedorov.gradledependencies:booktransitive') {
-//        selectHighestVersion()
-//    }
+    resolutionStrategy {
+//        force 'com.tfedorov.gradledependencies:booktransitive:0.1'
+//        eachDependency { DependencyResolveDetails details ->
+//            if (details.requested.group == 'com.tfedorov.gradledependencies' && details.requested.name == 'booktransitive' && details.requested.version == '0.2') {
+//                details.useVersion '0.1'
+//                details.because 'Task require that'
+//
+//            }
+//        }
+//        failOnVersionConflict()
+//        componentSelection {
+//            withModule("com.tfedorov.gradledependencies:booktransitive") { ComponentSelection selection ->
+//                if (selection.candidate.version == "0.2") {
+//                    selection.reject("version 0.2 is broken for 'com.tfedorov.gradledependencies:booktransitive'")
+//                }
+//            }
+//        }
+    } //resolutionStrategy
+
 }
 
 dependencies {
     // Use Scala 2.13 in our library project
     implementation 'org.scala-lang:scala-library:2.13.8'
-    implementation('com.tfedorov.gradledependencies:softwarelibrary:0.1') {
-//        exclude group: 'com.tfedorov.gradledependencies', module: 'booktransitive'
-    }
+    implementation 'com.tfedorov.gradledependencies:softwarelibrary:0.1'
     implementation 'com.tfedorov.gradledependencies:sciencelibrary:0.1'
-
 //    implementation('com.tfedorov.gradledependencies:booktransitive') {
 //        version {
 //            strictly '[0.1, 0.2['
