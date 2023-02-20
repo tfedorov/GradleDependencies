@@ -19,7 +19,7 @@ _ScienceLibrary_ depends on [_booktransitive:0.1_](../main/BookTransitiveV1), _S
 
 Gradle [__dependency management__](https://docs.gradle.org/current/userguide/core_dependency_management.html) resolves version of the _Book_ the _ClientApp_ will use.<p/>
 
-Resolve dependencies by changing [build.gradle](blob/main/ClientApp/build.gradle) file.
+Resolve dependencies by changing [build.gradle](../main/ClientApp/build.gradle) file.
 
 ## Tasks
 ### Task 1 - preparation
@@ -62,7 +62,7 @@ The application is over...
 
 ```
 
-Do it by changing [build.gradle](blob/main/ClientApp/build.gradle) file.
+Do it by changing [build.gradle](../main/ClientApp/build.gradle) file.
 Provide several way to do that:
 * Declaring simple version declaration
 * Declaring rich versions
