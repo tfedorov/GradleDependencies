@@ -12,10 +12,10 @@ Please read before:
 ### Description of project modules 
 The project consist all required modules for the task. You need to compile them and publish to Your local repository (_publishToMavenLocal_ command).
 
-The project has runnable [module _ClientApp_](tree/main/ClientApp).<br/>
-_ClientApp_ has 2 dependency libraries: [_ScienceLibrary_](tree/main/ScienceLibrary) and ['_SoftwareLibrary_'](tree/main/SoftwareLibrary).<br/>
+The project has runnable [module _ClientApp_](../main/ClientApp).<br/>
+_ClientApp_ has 2 dependency libraries: [_ScienceLibrary_](../main/ScienceLibrary) and ['_SoftwareLibrary_'](../main/SoftwareLibrary).<br/>
 Both libraries have a dependency on the '_Book_' module (but on different version).<br/>
-_ScienceLibrary_ depends on [_booktransitive:0.1_](tree/main/BookTransitiveV1), _SoftwareLibrary_ on - [_booktransitive:0.2_](tree/main/BookTransitiveV2).<br>
+_ScienceLibrary_ depends on [_booktransitive:0.1_](../main/BookTransitiveV1), _SoftwareLibrary_ on - [_booktransitive:0.2_](../main/BookTransitiveV2).<br>
 
 Gradle [__dependency management__](https://docs.gradle.org/current/userguide/core_dependency_management.html) resolves version of the _Book_ the _ClientApp_ will use.<p/>
 
