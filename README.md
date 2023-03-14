@@ -1,6 +1,14 @@
 # GradleDependencies
 
-This project for learning Gradle dependencies management task. </br>
+This module is focused on Gradle dependencies management, which is an essential part of software development. In Gradle, dependencies refer to external libraries and frameworks that a project requires to function correctly.
+
+Managing dependencies can be a complicated task as it involves ensuring that all dependencies are compatible with each other and with the project's codebase. Gradle provides a robust and flexible system for managing dependencies that makes it easier to manage complex projects.
+
+In this module, you will learn how to declare dependencies in your Gradle project, manage different versions of the same dependency, exclude transitive dependencies, and manage dependencies for different build variants. You will also learn how to use Gradle's dependency cache and how to publish your own dependencies to a remote repository.
+
+By the end of this module, you should have a solid understanding of how to manage dependencies in a Gradle project and be able to apply this knowledge to your own projects effectively.
+
+
 [Install & configure](#Installation) projects modules & solve [tasks](#tasks).
 
 Please read before:
@@ -12,8 +20,10 @@ Please read before:
 ### Description of project modules 
 The project consist all required modules for the task. You need to compile them and publish to Your local repository (_publishToMavenLocal_ command).
 
-The project has runnable [module _ClientApp_](../main/ClientApp).<br/>
-_ClientApp_ has 2 dependency libraries: [_ScienceLibrary_](../main/ScienceLibrary) and ['_SoftwareLibrary_'](../main/SoftwareLibrary).<br/>
+![Components](docs/components.png)
+
+The project has runnable [module _ClientApp_](tree/main/ClientApp).<br/>
+_ClientApp_ has 2 dependency libraries: [_ScienceLibrary_](tree/main/ScienceLibrary) and ['_SoftwareLibrary_'](tree/main/SoftwareLibrary).<br/>
 Both libraries have a dependency on the '_Book_' module (but on different version).<br/>
 _ScienceLibrary_ depends on [_booktransitive:0.1_](../main/BookTransitiveV1), _SoftwareLibrary_ on - [_booktransitive:0.2_](../main/BookTransitiveV2).<br>
 

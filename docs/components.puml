@@ -1,0 +1,29 @@
+
+@startuml
+
+
+component  "ClientApp" as app
+component  "ScienceLibrary" as sci
+component  "SoftwareLibrary" as soft
+component  "BookTransitiveV1" as book1
+component  "BookTransitiveV2" as book2
+
+
+
+app --> soft : .takeFromLibrary()
+app --> sci : .takeFromLibrary()
+
+
+sci --> book1 : .book()
+soft --> book2 : .book()
+
+skinparam component  {
+  ArrowFontColor #aa0000
+}
+soft ..> book1 : Or this one?
+
+note right of [app]
+  Configure books via
+  build.gradle file  only
+end note
+@enduml
