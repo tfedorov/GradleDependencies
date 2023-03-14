@@ -14,13 +14,13 @@ app --> soft : .takeFromLibrary()
 app --> sci : .takeFromLibrary()
 
 
-sci --> book1 : .book()
+sci --> book2 : .book()
 soft --> book2 : .book()
 
 skinparam component  {
   ArrowFontColor #aa0000
 }
-soft ..> book1 : Or this one?
+sci ..> book1 : Or this one?
 
 note right of [app]
   Configure books via
