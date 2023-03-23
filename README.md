@@ -1,42 +1,52 @@
 # GradleDependencies
 
-This module is focused on Gradle dependencies management, which is an essential part of software development. In Gradle, dependencies refer to external libraries and frameworks that a project requires to function correctly.
+This module is focused on Gradle dependencies management, which is an essential part of software development. In Gradle,
+dependencies refer to external libraries and frameworks that a project requires to function correctly.
 
-Managing dependencies can be a complicated task as it involves ensuring that all dependencies are compatible with each other and with the project's codebase. Gradle provides a robust and flexible system for managing dependencies that makes it easier to manage complex projects.
+Managing dependencies can be a complicated task as it involves ensuring that all dependencies are compatible with each
+other and with the project's codebase. Gradle provides a robust and flexible system for managing dependencies that makes
+it easier to manage complex projects.
 
-In this module, you will learn how to declare dependencies in your Gradle project, manage different versions of the same dependency, exclude transitive dependencies, and manage dependencies for different build variants. You will also learn how to use Gradle's dependency cache and how to publish your own dependencies to a remote repository.
+In this module, you will learn how to declare dependencies in your Gradle project, manage different versions of the same
+dependency, exclude transitive dependencies, and manage dependencies for different build variants. You will also learn
+how to use Gradle's dependency cache and how to publish your own dependencies to a remote repository.
 
-By the end of this module, you should have a solid understanding of how to manage dependencies in a Gradle project and be able to apply this knowledge to your own projects effectively.
-
+By the end of this module, you should have a solid understanding of how to manage dependencies in a Gradle project and
+be able to apply this knowledge to your own projects effectively.
 
 [Install & configure](#Installation) projects modules & solve [tasks](#tasks).
 
 Please read before:
+
 * Gradle docs
-  * [Working with Dependencies: Learning the basics](https://docs.gradle.org/current/userguide/core_dependency_management.html)
-  * [ Working with Dependencies: Controlling Transitives](https://docs.gradle.org/current/userguide/dependency_constraints.html)
+    * [Working with Dependencies: Learning the basics](https://docs.gradle.org/current/userguide/core_dependency_management.html)
+    * [ Working with Dependencies: Controlling Transitives](https://docs.gradle.org/current/userguide/dependency_constraints.html)
 * [Manage Gradle version conflicts with resolution strategy](https://proandroiddev.com/manage-gradle-version-conflicts-with-strategy-611ac3f6ce19)
 
-### Description of project modules 
-The project consist all required modules for the task. You need to compile them and publish to Your local repository (_publishToMavenLocal_ command).
+### Description of project modules
+
+The project consist all required modules for the task. You need to compile them and publish to Your local repository (_
+publishToMavenLocal_ command).
 
 ![Components](docs/components.png)
 
-The project has runnable [module _ClientApp_](../main/ClientApp).<br/>
-_ClientApp_ has 2 dependency libraries: [_ScienceLibrary_](../main/ScienceLibrary) and ['_SoftwareLibrary_'](../main/SoftwareLibrary).<br/>
-The project has runnable [module _ClientApp_](../main/ClientApp).<br/>
-_ClientApp_ has 2 dependency libraries: [_ScienceLibrary_](../main/ScienceLibrary) and ['_SoftwareLibrary_'](../main/SoftwareLibrary).<br/>
-Both libraries have a dependency on the '_Book_' module (but on different version).<br/>
-_ScienceLibrary_ depends on [_booktransitive:0.1_](../main/BookTransitiveV1), _SoftwareLibrary_ on - [_booktransitive:0.2_](../main/BookTransitiveV2).<br>
+The project has a runnable module [ _ClientApp_](../main/ClientApp).<br/>
+Which has 2 dependencies on: [_ScienceLibrary_](../main/ScienceLibrary) and [_SoftwareLibrary_](../main/SoftwareLibrary)
+.<br/>
+Both libraries have dependencies on the _Book_ module, but on different versions.<br/>
+_ScienceLibrary_ depends on [_booktransitive:0.1_](../main/BookTransitiveV1), _SoftwareLibrary_ on - [_booktransitive:
+0.2_](../main/BookTransitiveV2).<br>
 
-Gradle [__dependency management__](https://docs.gradle.org/current/userguide/core_dependency_management.html) resolves version of the _Book_ the _ClientApp_ will use.<p/>
-
-Resolve dependencies by changing [build.gradle](../main/ClientApp/build.gradle) file.
+Resolve dependencies by changing the [../ClientApp/build.gradle](../main/ClientApp/build.gradle) file. Use
+Gradle [dependency management](https://docs.gradle.org/current/userguide/core_dependency_management.html) for it.
 
 ## Tasks
+
 ### Task 1 - preparation
+
 * [Install & configure](#Installation) projects
 * Run the command bellow, check results:
+
 ```sh
 % gradle clean build run
 
@@ -52,11 +62,13 @@ Action 2: I take from the 'Software Library'  a book 'Programming in Scala Fifth
 The application is over...
 
 ```
+
 * Print dependencies tree, and explain it.
 
 ### Task 2 - dependency management
 
 Change resolved _Book_ dependencies for this task. The result should be:
+
 ```sh
 % gradle clean build run
 
@@ -74,8 +86,8 @@ The application is over...
 
 ```
 
-Do it by changing [build.gradle](../main/ClientApp/build.gradle) file.
-Provide several way to do that:
+Do it by changing the [build.gradle](../main/ClientApp/build.gradle) file. Provide several way to do that:
+
 * Declaring simple version declaration
 * Declaring rich versions
 * Exclude unnecessary dependency
@@ -87,13 +99,19 @@ Explain what each method does. Show pros/contra of each of them.
 
 * Add code for failing on versions conflict.
 * Add code for failing on specific _Book_ version.
-* Do randomly _Book_ resolving on each build. Make no sense in prod, but useful for understanding internal process.
-* Use api scope in submodules.
-* Find/use Gradle plugin for dependencies management.
+* Implement _Book_ resolving in the case of the presence of an environment variable. Do it in
+  the [build.gradle](../main/ClientApp/build.gradle)
+* Add slf4-logging to all sub-modules. Describe what dependencies in what module should be used.
+* Find/use Gradle plugins for dependencies management (
+  e.g. [here](https://plugins.gradle.org/search?term=dependencies+conflicts))
 
 ## Installation
 
-You should have a JVM v > 9, Scala v > 13 (Or You may configure lower version)
+You should have:
+* JVM version >= 9
+* Scala version >= 13 
+* Gradle version >= 7
+(The other version maybe working as well)
 
 Download the project and perform 5 steps described bellow.
 
